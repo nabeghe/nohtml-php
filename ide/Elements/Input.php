@@ -1,0 +1,41 @@
+<?php namespace Nabeghe\NoHtml\Ide\Elements;
+
+/**
+ * @method $this accept(string $value = 0)
+ * @method $this alt(string $value = 0)
+ * @method $this autocomplete(string $value = 0)
+ * @method $this autofocus(bool $value = 0)
+ * @method $this capture(string $value = 0)
+ * @method $this checked(bool $value = 0)
+ * @method $this dirname(string $value = 0)
+ * @method $this disabled(bool $value = 0)
+ * @method $this form(string $value = 0)
+ * @method $this formaction(string $value = 0)
+ * @method $this formenctype(string $value = 0)
+ * @method $this formmethod(string $value = 0)
+ * @method $this formnovalidate(bool $value = 0)
+ * @method $this formtarget(string $value = 0)
+ * @method $this height(int|string $value = false)
+ * @method $this list(string $value = 0)
+ * @method $this max(string|int|float $value = false)
+ * @method $this maxlength(int $value)
+ * @method $this min(string|int|float $value = false)
+ * @method $this minlength(int $value = false)
+ * @method $this multiple(bool $value = 0)
+ * @method $this name(string $value = 0)
+ * @method $this pattern(string $value = 0)
+ * @method $this placeholder(string $value = 0)
+ * @method $this popovertarget(string $value = 0)
+ * @method $this popovertargetaction(string $value = 0)
+ * @method $this readonly(bool $value = 0)
+ * @method $this required(bool $value = 0)
+ * @method $this size(int $value = false)
+ * @method $this src(string $value = 0)
+ * @method $this step(string|int|float $value = false)
+ * @method $this type(string $value = 0)
+ * @method $this value(string $value = 0)
+ * @method $this width(int|string $value = false)
+ */
+class Input extends MainElement
+{
+}

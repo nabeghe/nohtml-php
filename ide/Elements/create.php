@@ -1,0 +1,121 @@
+<?php
+
+use Nabeghe\NoHtml\Ide\Elements\MainElement;
+
+$text = '
+A a(...$childs)
+Abbr abbr(...$childs)
+Address address(...$childs)
+Article article(...$childs)
+Aside aside(...$childs)
+Audio audio(...$childs)
+B b(...$childs)
+Bdi bdi(...$childs)
+Bdo bdo(...$childs)
+Blockquote blockquote(...$childs)
+Body body(...$childs)
+Button button(...$childs)
+Canvas canvas(...$childs)
+Caption caption(...$childs)
+Cite cite(...$childs)
+Code code(...$childs)
+Colgroup colgroup(...$childs)
+Data data(...$childs)
+Datalist datalist(...$childs)
+Dd dd(...$childs)
+Del del(...$childs)
+Details details(...$childs)
+Dialog dialog(...$childs)
+Div div(...$childs)
+Dl dl(...$childs)
+Dt dt(...$childs)
+Em em(...$childs)
+Fieldset fieldset(...$childs)
+Figcaption figcaption(...$childs)
+Figure figure(...$childs)
+Footer footer(...$childs)
+Form form(...$childs)
+H1 h1(...$childs)
+H2 h2(...$childs)
+H3 h3(...$childs)
+H4 h4(...$childs)
+H5 h5(...$childs)
+H6 h6(...$childs)
+Header header(...$childs)
+Hr hr()
+Html html(...$childs)
+I i(...$childs)
+Iframe iframe(...$childs)
+Ins ins(...$childs)
+Kbd kbd(...$childs)
+Label label(...$childs)
+Legend legend(...$childs)
+Li li(...$childs)
+Main main(...$childs)
+Map map(...$childs)
+Mark mark(...$childs)
+Menu menu(...$childs)
+Meta meta()
+Meter meter(...$childs)
+Nav nav(...$childs)
+Noscript noscript(...$childs)
+Object object(...$childs)
+Ol ol(...$childs)
+Optgroup optgroup(...$childs)
+Option option(...$childs)
+Output output(...$childs)
+P p(...$childs)
+Picture picture(...$childs)
+Pre pre(...$childs)
+Progress progress(...$childs)
+Q q(...$childs)
+Rp rp(...$childs)
+Rt rt(...$childs)
+Ruby ruby(...$childs)
+S s(...$childs)
+Samp samp(...$childs)
+Script script(...$childs)
+Section section(...$childs)
+Select select(...$childs)
+Small small(...$childs)
+Span span(...$childs)
+Strong strong(...$childs)
+Style style(...$childs)
+Sub sub(...$childs)
+Summary summary(...$childs)
+Sup sup(...$childs)
+Table table(...$childs)
+Tbody tbody(...$childs)
+Td td(...$childs)
+Template template(...$childs)
+Textarea textarea(...$childs)
+Tfoot tfoot(...$childs)
+Th th(...$childs)
+Thead thead(...$childs)
+Time time(...$childs)
+Title title(...$childs)
+Tr tr(...$childs)
+Track track()
+U u(...$childs)
+Ul ul(...$childs)
+Var var(...$childs)
+Video video(...$childs)
+Wbr wbr()
+';
+
+$lines = explode("\n", trim($text));
+foreach ($lines as $line) {
+    $parts = explode(' ', $line);
+    $path = __DIR__.'/'.$parts[0].'.php';
+    if (!file_exists($path)) {
+        $code = trim("
+<?php namespace Nabeghe\NoHtml\Ide\Elements;
+
+class $parts[0] extends MainElement
+{
+}
+        ");
+
+        file_put_contents($path, $code);
+    }
+}
