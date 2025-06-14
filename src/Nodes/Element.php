@@ -100,6 +100,21 @@ class Element
 
         return $element;
     }
+    
+    /**
+     * @param  string  $name
+     * @param $value
+     * @return $this|mixed|null
+     */
+    public function a(string $name, $value = null)
+    {
+        if (func_num_args() == 2) {
+            $this->attrs[$name] = $value;
+            return $this;
+        }
+        
+        return $this->attrs[$name] ?? null;
+    }
 
     /**
      * @param  string  $key
