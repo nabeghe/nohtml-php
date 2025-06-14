@@ -1,7 +1,7 @@
 # NoHtml for PHP
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/a44012b9-e083-4660-952e-f98c05c5d183"/>
+    <img src="https://github.com/user-attachments/assets/fbad06c3-581f-4f42-ac45-004a5939323c"/>
 </p>
 
 > Say no to HTML — write views in PHP with a clean, simple DSL.
